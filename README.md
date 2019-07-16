@@ -12,7 +12,7 @@ sudo sh setup_node.sh "10.15.3"
 # 安装rk-oss
 
 ```javascript
-npm i -g win32-tools
+npm i -g rk-oss
 ```
 
 # 基本命令行参数
