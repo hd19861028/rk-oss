@@ -1,0 +1,35 @@
+{
+	"name": "rk-oss",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hd19861028/rk-oss.git"
+	},
+	"main": "common.js",
+	"author": {
+		"email": "282642547@qq.com",
+		"name": "Mars Hu"
+	},
+	"scripts": {
+		"test": "node ./cli/readdir prefix=log/2019/07/11/ output=./output region=xxx accessKeyId=xxx accessKeySecret=xxx bucket=xxx"
+	},
+	"bin": {
+		"oss-dir": "./cli/readdir.js"
+	},
+	"dependencies": {
+		"ali-oss": "^6.1.1"
+	},
+	"description": "",
+	"keywords": [
+		"oss",
+		"client",
+		"rayku"
+	],
+	"engines": {
+		"node": ">=5.1.1",
+		"node-gyp": ">=3.0.3",
+		"npm": ">=3.3.12"
+	},
+	"license": "MIT",
+	"devDependencies": {}
+}
