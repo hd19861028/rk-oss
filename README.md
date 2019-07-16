@@ -28,6 +28,7 @@ npm i -g rk-oss
 
 * prefix
 * output
+* limit: 文件个数。默认1000个
 * 基本命令行参数
 
 ```javascript

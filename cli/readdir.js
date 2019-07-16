@@ -10,13 +10,15 @@ console.error = function () { }
 var argMap = args(process.argv.slice(2));
 
 (async () => {
-    var { region, accessKeyId, accessKeySecret, bucket, prefix, output } = argMap
+    var { region, accessKeyId, accessKeySecret, bucket, prefix, output, limit } = argMap
     var client = oss.instance({ region, accessKeyId, accessKeySecret, bucket });
     if (!path.isAbsolute(output)) {
         output = path.resolve(process.cwd(), output)
     }
+    if(limit === undefined) limit = 1000;
+    else limit = ~~limit
 
-    let result = await client.list({ prefix, delimiter: '/' });
+    let result = await client.list({ prefix, delimiter: '/', "max-keys": limit });
     var total = result.objects.length;
     for (var i = 0; i < result.objects.length; i++) {
         var file = result.objects[i];
