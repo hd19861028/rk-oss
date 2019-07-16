@@ -1,6 +1,6 @@
 {
 	"name": "rk-oss",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/hd19861028/rk-oss.git"
@@ -14,7 +14,8 @@
 		"test": "node ./cli/readdir prefix=log/2019/07/11/ output=./output region=xxx accessKeyId=xxx accessKeySecret=xxx bucket=xxx"
 	},
 	"bin": {
-		"oss-dir": "./cli/readdir.js"
+		"oss-dir": "./cli/readdir.js",
+		"oss-put": "./cli/putfile.js"
 	},
 	"dependencies": {
 		"ali-oss": "^6.1.1"
