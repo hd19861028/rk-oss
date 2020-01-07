@@ -1,6 +1,6 @@
 {
 	"name": "rk-oss",
-	"version": "1.0.12",
+	"version": "1.0.14",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/hd19861028/rk-oss.git"
@@ -11,10 +11,12 @@
 		"name": "Mars Hu"
 	},
 	"scripts": {
-		"test": "node ./cli/readdir prefix=log/2019/07/11/ output=./output region=xxx accessKeyId=xxx accessKeySecret=xxx bucket=xxx"
+		"test": "node ./cli/readdir prefix=log/2019/07/11/ output=./output region=xxx accessKeyId=xxx accessKeySecret=xxx bucket=xxx",
+		"list": "node ./cli/list prefix=quickq/download/ region=xxxx accessKeyId=xxx accessKeySecret=xxx bucket=xxx search=.apk"
 	},
 	"bin": {
 		"oss-dir": "./cli/readdir.js",
+		"oss-list": "./cli/list.js",
 		"oss-put": "./cli/putfile.js"
 	},
 	"dependencies": {
