@@ -46,3 +46,16 @@ oss-dir prefix=log/2019/07/13/ output=/root/log/ region=xxx accessKeyId=xxx acce
 ```javascript
 oss-put local=/root/log/test.log remote=log/2019/07/13/test.log region=xxx accessKeyId=xxx accessKeySecret=xxx bucket=xxx
 ```
+
+<h3>工具3：列出目录下的所有文件</h3>
+
+> 参数列表
+
+* prefix
+* search: 文件名搜索条件(暂不支持通配符)
+* limit: 文件个数。默认1000个
+* 基本命令行参数
+
+```javascript
+oss-put local=/root/log/test.log remote=log/2019/07/13/test.log region=xxx accessKeyId=xxx accessKeySecret=xxx bucket=xxx
+```
