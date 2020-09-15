@@ -11,6 +11,25 @@ var argMap = args(process.argv.slice(2));
 
 (async () => {
     try {
+        if (argMap['-h'] !== undefined || argMap['--help'] !== undefined) {
+            console.log(`oss-dir：下载目录下所有文件
+            
+region
+        必填，oss区域
+accessKeyId
+        必填，oss key
+accessKeySecret
+        必填，oss key对应的秘钥
+bucket
+        必填
+prefix
+        可选，列举哪个目录下的文件
+limit    
+        可选，列举文件上限，1~1000
+output
+        必填，文件下载到哪个目录，可以用相对目录。例如./dist/`)
+            return
+        }
         var { region, accessKeyId, accessKeySecret, bucket, prefix, output, limit } = argMap
         var client = oss.instance({ region, accessKeyId, accessKeySecret, bucket });
         if (!path.isAbsolute(output)) {
